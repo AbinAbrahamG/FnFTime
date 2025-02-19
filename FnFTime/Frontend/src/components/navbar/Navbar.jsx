@@ -57,7 +57,7 @@ export default function Navbar() {
         </Link>
         <Link to="/profile" style={{ textDecoration: "none" }}>
           <div className="user">
-            <img src={currentUser.profilepic.startsWith("http") ? currentUser.profilepic : `http://localhost:7777/${currentUser.profilepic}`} alt="user" />
+            <img src={currentUser.profilepic.startsWith("http") ? currentUser.profilepic : `https://fnftime.onrender.com/${currentUser.profilepic}`} alt="user" />
             <span>{currentUser.name}</span>
           </div>
         </Link>

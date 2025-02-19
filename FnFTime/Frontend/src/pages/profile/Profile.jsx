@@ -21,7 +21,7 @@ export default function Profile() {
     const formData = new FormData();
     formData.append("profilepic", selectedFile);
     try {
-      const res = await axios.post(`http://localhost:7777/user/${currentUser._id}/profilepic`, formData, {
+      const res = await axios.post(`https://fnftime.onrender.com/user/${currentUser._id}/profilepic`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -44,7 +44,7 @@ export default function Profile() {
         />
         <div className="profilePicContainer">
           <img
-            src={currentUser.profilepic.startsWith("http") ? currentUser.profilepic : `http://localhost:7777/${currentUser.profilepic}`}
+            src={currentUser.profilepic.startsWith("http") ? currentUser.profilepic : `https://fnftime.onrender.com/${currentUser.profilepic}`}
             alt=""
             className="profilePic"
           />

@@ -11,7 +11,7 @@ export default function RightBar() {
   useEffect(() => {
     const fetchFriends = async () => {
       try {
-        const res = await axios.get(`http://localhost:7777/user/${currentUser._id}`);
+        const res = await axios.get(`https://fnftime.onrender.com/user/${currentUser._id}`);
         setFriends(res.data.friends || []);
       } catch (error) {
         console.error('Error fetching friends:', error);
@@ -20,7 +20,7 @@ export default function RightBar() {
 
     const fetchSuggestions = async () => {
       try {
-        const res = await axios.get('http://localhost:7777/suggestions');
+        const res = await axios.get('https://fnftime.onrender.com/suggestions');
         setSuggestions(res.data);
       } catch (error) {
         console.error('Error fetching suggestions:', error);
@@ -35,7 +35,7 @@ export default function RightBar() {
 
   const handleAddFriend = async (friendId) => {
     try {
-      const res = await axios.post(`http://localhost:7777/user/${currentUser._id}/addFriend`, { friendId });
+      const res = await axios.post(`https://fnftime.onrender.com/user/${currentUser._id}/addFriend`, { friendId });
       setFriends((prevFriends) => [...prevFriends, { _id: friendId }]);
       setSuggestions((prevSuggestions) => prevSuggestions.filter((user) => user._id !== friendId));
       fetchCurrentUser(currentUser._id);
@@ -53,7 +53,7 @@ export default function RightBar() {
             <div className="user" key={user._id}>
               <div className="userInfo">
                 <img
-                  src={user.profilepic.startsWith("http") ? user.profilepic : `http://localhost:7777/${user.profilepic}`}
+                  src={user.profilepic.startsWith("http") ? user.profilepic : `https://fnftime.onrender.com/${user.profilepic}`}
                   alt=""
                 />
                 <span>{user.name}</span>
@@ -72,7 +72,7 @@ export default function RightBar() {
             <div className="user" key={friend._id}>
               <div className="userInfo">
                 <img
-                  src={friend.profilepic && friend.profilepic.startsWith("http") ? friend.profilepic : `http://localhost:7777/${friend.profilepic}`}
+                  src={friend.profilepic && friend.profilepic.startsWith("http") ? friend.profilepic : `https://fnftime.onrender.com/${friend.profilepic}`}
                   alt=""
                 />
                 <div className="online" />

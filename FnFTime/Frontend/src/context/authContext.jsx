@@ -10,7 +10,7 @@ export const AuthContextProvider = ({ children }) => {
   
     const login = async (email, password) => {
       try {
-        const response = await axios.post('http://localhost:7777/login', { email, password });
+        const response = await axios.post('https://fnftime.onrender.com/login', { email, password });
         const { token, userId, role } = response.data;
         sessionStorage.setItem("token", token);
         sessionStorage.setItem("userRole", role);
@@ -24,7 +24,7 @@ export const AuthContextProvider = ({ children }) => {
 
   const fetchCurrentUser = async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:7777/user/${userId}`, {
+      const response = await axios.get(`https://fnftime.onrender.com/user/${userId}`, {
         headers: {
           Authorization: `Bearer ${sessionStorage.getItem("token")}`
         }

@@ -32,7 +32,7 @@ export default function Stories() {
     <div className="stories">
       {currentUser && (
         <div className="story">
-          <img src={currentUser.profilepic.startsWith("http") ? currentUser.profilepic : `http://localhost:7777/${currentUser.profilepic}`} alt={currentUser.name} />
+          <img src={currentUser.profilepic.startsWith("http") ? currentUser.profilepic : `https://fnftime.onrender.com/${currentUser.profilepic}`} alt={currentUser.name} />
           <span>{currentUser.name}</span>
           <button>+</button>
         </div>

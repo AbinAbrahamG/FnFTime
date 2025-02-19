@@ -9,7 +9,7 @@ export default function Shop() {
 
   const handlePurchase = async (coupon) => {
     try {
-      const res = await axios.post('http://localhost:7777/purchase', {
+      const res = await axios.post('https://fnftime.onrender.com/purchase', {
         userId: currentUser._id,
         coupon,
       });

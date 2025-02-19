@@ -28,7 +28,7 @@ export default function CreatePost() {
     }
 
     try {
-      const res = await axiosInstance.post('http://localhost:7777/create', formData, {
+      const res = await axiosInstance.post('https://fnftime.onrender.com/create', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -50,7 +50,7 @@ export default function CreatePost() {
     <div className="create">
       <div className="container">
         <div className="top">
-          <img src={currentUser.profilepic.startsWith("http") ? currentUser.profilepic : `http://localhost:7777/${currentUser.profilepic}`} alt={currentUser.name} />
+          <img src={currentUser.profilepic.startsWith("http") ? currentUser.profilepic : `https://fnftime.onrender.com/${currentUser.profilepic}`} alt={currentUser.name} />
           <input
             type="text"
             placeholder={`What's on your mind ${currentUser.name}?`}

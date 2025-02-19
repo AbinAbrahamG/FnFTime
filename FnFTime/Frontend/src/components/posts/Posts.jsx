@@ -47,7 +47,7 @@ export default function Posts() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get('http://localhost:7777/posts');
+        const res = await axios.get('https://fnftime.onrender.com/posts');
         setPosts(res.data);
       } catch (error) {
         console.error('Error fetching posts:', error);

@@ -58,7 +58,7 @@ const Signin = () => {
 
   const handleRegister = () => {
     if (validateForm()) {
-      axios.post('http://localhost:7777/register', form)
+      axios.post('https://fnftime.onrender.com/register', form)
         .then((res) => {
           alert('Registration successful! Please log in.');
           setSwitched(false); // Switch to login form

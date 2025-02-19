@@ -38,7 +38,7 @@ export default function Post({ post }) {
           <div className="userInfo">
           {post.userId && (
             <>
-            <img src={post.userId.profilepic.startsWith("http") ? post.userId.profilepic : `http://localhost:7777/${post.userId.profilepic}`} alt={post.userId.name} />
+            <img src={post.userId.profilepic.startsWith("http") ? post.userId.profilepic : `https://fnftime.onrender.com/${post.userId.profilepic}`} alt={post.userId.name} />
             <div className="details">
               <Link
                 to={`/profile/${post.userId._id}`}
@@ -64,7 +64,7 @@ export default function Post({ post }) {
               <img 
               src={post.file.startsWith("http")
                 ? post.file
-                : `http://localhost:7777/${post.file}`
+                : `https://fnftime.onrender.com/${post.file}`
               }
               alt="Post" />
             )
