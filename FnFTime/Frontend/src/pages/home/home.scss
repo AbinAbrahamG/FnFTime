@@ -1,0 +1,16 @@
+@use "../../style.scss";
+
+.home {
+  @include style.themify(style.$themes) {
+    padding: 20px 70px;
+    background-color: style.themed("bgSoft");
+
+    @include style.mobile {
+      padding: 10px;
+    }
+
+    @include style.tablet {
+      padding: 20px;
+    }
+  }
+}

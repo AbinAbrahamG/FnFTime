@@ -1,0 +1,37 @@
+.shop-page {
+    padding: 20px;
+    text-align: center;
+}
+  
+.coupons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .coupon {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .coupon:hover {
+    transform: scale(1.05);
+  }
+  
+  .coupon img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .message {
+    color: red;
+    margin-top: 10px;
+  }

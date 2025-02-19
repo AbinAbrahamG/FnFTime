@@ -1,0 +1,68 @@
+@use "../../style.scss";
+
+.admin {
+  @include style.themify(style.$themes) {
+    padding: 20px 70px;
+    background-color: style.themed("bgSoft");
+
+    @include style.mobile {
+      padding: 10px;
+    }
+
+    @include style.tablet {
+      padding: 20px;
+    }
+  }
+}
+
+.users-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+  
+.user-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    position: relative;
+}
+  
+.user-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+  
+.user-details {
+    margin-top: 10px;
+}
+  
+.user-details h2 {
+    font-size: 18px;
+    margin: 0;
+}
+  
+.user-details p {
+    font-size: 14px;
+    color: #666;
+}
+
+.user-details button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.user-details button:hover {
+  background-color: #ff1a1a;
+}
