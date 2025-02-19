@@ -1,6 +1,5 @@
 // import './App.css'
 import Home from './pages/home/Home';
-import Signin from './pages/Signin/Signin'
 import Profile from './pages/profile/Profile';
 import "./style.scss";
 import { createBrowserRouter, Navigate, Outlet, Route, RouterProvider, Routes } from 'react-router-dom'
@@ -15,6 +14,7 @@ import Stories from './components/stories/Stories';
 import Posts from './components/posts/Posts';
 import Admin from './pages/admin/Admin';
 import Shop from './pages/shop/Shop';
+import Signin from './pages/signin/Signin';
 
 function App() {
   const { currentUser } = useContext(AuthContext);
