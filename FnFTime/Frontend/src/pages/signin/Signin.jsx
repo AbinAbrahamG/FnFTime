@@ -1,4 +1,4 @@
-import { Button, TextField } from '@mui/material'
+import { Button, TextField, Typography } from '@mui/material'
 import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import cn from "https://cdn.skypack.dev/classnames@2.3.2";
@@ -87,13 +87,16 @@ const Signin = () => {
                   error={!!errors.password}
                   helperText={errors.password}/>
                 <Button color='primary' variant='contained' onClick={handleLogin}>Login</Button>
+                <Typography variant="body2" color="textSecondary" align="center">
+                    Note: This application is in development stage and the backend is deployed on render.com, so it may take some time to login.
+                </Typography>
               </form>
               </div>
             </div>
             <div className="demo__form">
               <div className="demo__form-content">
               <form className="form" onSubmit={(e) => e.preventDefault()}>
-                <div className="form__heading">Time to Feel like Home</div>
+                <div className="form__heading">Create a new Account</div>
                 <TextField label='Name' variant='outlined' name='name' value={form.name} onChange={(e)=>{
                   setForm({...form,name:e.target.value})}}
                   error={!!errors.name}
@@ -117,8 +120,8 @@ const Signin = () => {
               <div className="demo__switcher-content">
                 <div className="demo__switcher-text">
                   <div>
-                    <h3>New here?</h3>
-                    <p>Sign up and discover great amount of new opportunities!</p>
+                    <h3>New to FnFTime?</h3>
+                    <p>Sign up, add your Friends and Family!</p>
                   </div>
                   <div>
                     <h3>One of us?</h3>
